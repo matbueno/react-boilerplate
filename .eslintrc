@@ -1,0 +1,92 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier", "react-hooks"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {},
+      "webpack": {
+        "config": "webpack.config.base.js"
+      }
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "info", "error"]
+      }
+    ],
+    "import/named": "error",
+    "import/prefer-default-export": "off",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1,
+        "maxBOF": 0
+      }
+    ],
+    "arrow-parens": ["error", "as-needed"],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "semi": false,
+        "parser": "babel",
+        "printWidth": 100
+      }
+    ],
+    "jsx-a11y/href-no-hash": 0,
+    "react/jsx-filename-extension": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": 0,
+    "no-underscore-dangle": 0,
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.dev.js",
+          "**/*.test.js",
+          "**/testing/**.js",
+          "**/stories.js",
+          "server.js",
+          "next.config.js",
+          "postcss.config.js",
+          "webpack.config.*",
+          "storybook/*"
+        ]
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ]
+      }
+    ]
+  }
+}

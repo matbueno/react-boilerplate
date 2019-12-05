@@ -1,0 +1,26 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": [
+        "function",
+        "if",
+        "each",
+        "include",
+        "mixin"
+      ]
+    }],
+    "selector-nested-pattern": "^&",
+    "max-nesting-depth": 3,
+    "max-empty-lines": 2,
+    "indentation": 2,
+    "string-quotes": "double",
+    "no-duplicate-selectors": true,
+    "rule-empty-line-before": "always-multi-line",
+    "media-feature-range-operator-space-before": "always",
+    "media-feature-range-operator-space-after": "always",
+    "media-feature-parentheses-space-inside": "never",
+    "media-feature-colon-space-before": "never",
+    "media-feature-colon-space-after": "always"
+  }
+}
