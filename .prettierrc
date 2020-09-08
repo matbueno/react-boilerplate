@@ -11,11 +11,27 @@
   "parser": "babel",
   "overrides": [
     {
+      "files": ".prettierrc",
+      "options": { "parser": "json" }
+    },
+    {
       "files": "*.css",
       "options": {
         "singleQuote": false,
         "parser": "css"
       }
+    },
+    {
+      "files": "*.json",
+      "options": { "parser": "json" }
+    },
+    {
+      "files": "*.yml",
+      "options": { "parser": "yaml" }
+    },
+    {
+      "files": "*.html",
+      "options": { "parser": "html" }
     }
   ]
 }
