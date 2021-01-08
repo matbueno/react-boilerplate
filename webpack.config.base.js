@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -5,7 +6,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: [path.resolve(__dirname, 'src', 'index.js')],
+    app: [path.resolve(__dirname, 'src', 'index.tsx')],
   },
   mode: process.env.APP_ENV,
   output: {
@@ -50,11 +51,16 @@ module.exports = {
           loader: 'html-loader',
         },
       },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ],
   },
   resolve: {
     modules: [path.join(__dirname), path.join(__dirname, 'node_modules')],
-    extensions: ['.js', '.css'],
+    extensions: ['.tsx', '.ts', '.js', '.css'],
     alias: {
       _atoms: path.resolve(__dirname, 'src', 'components', 'atoms'),
       _molecules: path.resolve(__dirname, 'src', 'components', 'molecules'),

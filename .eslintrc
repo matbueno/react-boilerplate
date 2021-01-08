@@ -1,13 +1,26 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["prettier", "react-hooks"],
-  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
     "node": true,
     "jest": true
   },
   "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
     "import/resolver": {
       "node": {},
       "webpack": {
@@ -20,11 +33,22 @@
     "sourceType": "module"
   },
   "rules": {
-    "semi": ["error", "never"],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
     "no-console": [
       "error",
       {
-        "allow": ["warn", "info", "error"]
+        "allow": [
+          "warn",
+          "info",
+          "error"
+        ]
       }
     ],
     "import/named": "error",
@@ -37,7 +61,10 @@
         "maxBOF": 0
       }
     ],
-    "arrow-parens": ["error", "as-needed"],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
     "prettier/prettier": [
       "error",
       {
@@ -56,7 +83,10 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": 0,
     "no-underscore-dangle": 0,
-    "import/imports-first": ["error", "absolute-first"],
+    "import/imports-first": [
+      "error",
+      "absolute-first"
+    ],
     "import/newline-after-import": "error",
     "import/no-extraneous-dependencies": [
       "error",

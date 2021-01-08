@@ -1,0 +1,11 @@
+.eslintrc
+.eslintignore
+.prettierignore
+.gitignore
+assets/
+README.md
+.env
+.env.example
+*.log
+*.lock
+db_data/

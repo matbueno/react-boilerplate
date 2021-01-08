@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 
 const { merge } = require('webpack-merge')
@@ -21,5 +22,6 @@ module.exports = merge(base, {
     compress: false,
     historyApiFallback: true,
     port: 3000,
+    hotOnly: true,
   },
 })

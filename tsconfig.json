@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react",
+    "paths": {
+      "_pages": ["./src/components/pages"],
+      "_pages/*": ["./src/components/pages/*"],
+      "_styles": ["./src/styles"],
+      "_styles/*": ["./src/styles/*"]
+    }
+  },
+  "include": ["src"]
+}

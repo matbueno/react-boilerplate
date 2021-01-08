@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const autoprefixer = require('autoprefixer')
 const postCSSImport = require('postcss-import')()
 const postCSSNested = require('postcss-nested')
@@ -29,8 +30,8 @@ module.exports = {
     postCSSCustomMedia({
       importFrom: {
         customMedia: {
-          '--s-viewport': `(max-width: ${gridBreakpoints.mobile})`,
-          '--m-viewport': `(max-width: ${gridBreakpoints.desktop})`,
+          '--sm-viewport': `(max-width: ${gridBreakpoints.mobile})`,
+          '--md-viewport': `(max-width: ${gridBreakpoints.desktop})`,
           '--retina-display': `
           (-webkit-min-device-pixel-ratio: ${gridBreakpoints.retina.minPixelRatio}),
           (min-resolution: ${gridBreakpoints.retina.minResolution})
